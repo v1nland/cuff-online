@@ -6,14 +6,8 @@ using Photon.Realtime;
 
 public class PhotonManager : MonoBehaviourPunCallbacks
 {
-    void Start()
-    {
+    public void GameConnect() {
         PhotonNetwork.ConnectUsingSettings();
-    }
-
-    void Update()
-    {
-        
     }
 
     public override void OnConnectedToMaster() {

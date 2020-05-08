@@ -369,7 +369,7 @@ public class ChatGui : MonoBehaviour, IChatClientListener
 
 	    this.ConnectingLabel.SetActive(false);
 
-	    this.UserIdText.text = "Connected as "+ this.UserName;
+	    this.UserIdText.text = "Conectado "+ this.UserName;
 
 		this.ChatPanel.gameObject.SetActive(true);
 
@@ -416,7 +416,7 @@ public class ChatGui : MonoBehaviour, IChatClientListener
 		// in this demo, we simply send a message into each channel. This is NOT a must have!
 		foreach (string channel in channels)
 		{
-			this.chatClient.PublishMessage(channel, "says 'hi'."); // you don't HAVE to send a msg on join but you could.
+			this.chatClient.PublishMessage(channel, "ha entrado al canal."); // you don't HAVE to send a msg on join but you could.
 
 			if (this.ChannelToggleToInstantiate != null)
 			{

@@ -7,13 +7,14 @@ public class NamePickGui : MonoBehaviour
     private const string UserNamePlayerPref = "NamePickUserName";
 
     public ChatGui chatNewComponent;
+    public PhotonManager photonManager;
 
     public InputField idInput;
 
     public void Start()
     {
-        this.chatNewComponent = FindObjectOfType<ChatGui>();
-
+        this.chatNewComponent = GetComponent<ChatGui>();
+        this.photonManager = GetComponent<PhotonManager>();
 
         string prefsName = PlayerPrefs.GetString(NamePickGui.UserNamePlayerPref);
         if (!string.IsNullOrEmpty(prefsName))
@@ -37,6 +38,7 @@ public class NamePickGui : MonoBehaviour
         ChatGui chatNewComponent = FindObjectOfType<ChatGui>();
         chatNewComponent.UserName = this.idInput.text.Trim();
 		chatNewComponent.Connect();
+        photonManager.GameConnect();
         enabled = false;
 
         PlayerPrefs.SetString(NamePickGui.UserNamePlayerPref, chatNewComponent.UserName);
