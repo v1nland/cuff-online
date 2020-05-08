@@ -1512,7 +1512,7 @@ function _emscripten_asm_const_ii(code, a0) {
  return ASM_CONSTS[code](a0);
 }
 STATIC_BASE = GLOBAL_BASE;
-STATICTOP = STATIC_BASE + 3326608;
+STATICTOP = STATIC_BASE + 3337168;
 __ATINIT__.push({
  func: (function() {
   __GLOBAL__sub_I_AccessibilityScriptingClasses_cpp();
@@ -3303,10 +3303,6 @@ __ATINIT__.push({
  })
 }, {
  func: (function() {
-  __GLOBAL__sub_I_Il2CppCodeRegistration_cpp();
- })
-}, {
- func: (function() {
   __GLOBAL__sub_I_Lump_libil2cpp_vm_cpp();
  })
 }, {
@@ -3323,10 +3319,14 @@ __ATINIT__.push({
  })
 }, {
  func: (function() {
+  __GLOBAL__sub_I_Il2CppCodeRegistration_cpp();
+ })
+}, {
+ func: (function() {
   ___emscripten_environ_constructor();
  })
 });
-var STATIC_BUMP = 3326608;
+var STATIC_BUMP = 3337168;
 Module["STATIC_BASE"] = STATIC_BASE;
 Module["STATIC_BUMP"] = STATIC_BUMP;
 var tempDoublePtr = STATICTOP;
@@ -15980,6 +15980,11 @@ function nullFunc_vijjji(x) {
  err("Build with ASSERTIONS=2 for more info.");
  abort(x);
 }
+function nullFunc_vji(x) {
+ err("Invalid function pointer called with signature 'vji'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
+ err("Build with ASSERTIONS=2 for more info.");
+ abort(x);
+}
 function nullFunc_vjiiii(x) {
  err("Invalid function pointer called with signature 'vjiiii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
  err("Build with ASSERTIONS=2 for more info.");
@@ -15990,8 +15995,8 @@ function nullFunc_vjji(x) {
  err("Build with ASSERTIONS=2 for more info.");
  abort(x);
 }
-Module["wasmTableSize"] = 84575;
-Module["wasmMaxTableSize"] = 84575;
+Module["wasmTableSize"] = 84576;
+Module["wasmMaxTableSize"] = 84576;
 function invoke_dd(index, a1) {
  var sp = stackSave();
  try {
@@ -18592,6 +18597,16 @@ function invoke_vijjji(index, a1, a2, a3, a4, a5, a6, a7, a8) {
   Module["setThrew"](1, 0);
  }
 }
+function invoke_vji(index, a1, a2, a3) {
+ var sp = stackSave();
+ try {
+  Module["dynCall_vji"](index, a1, a2, a3);
+ } catch (e) {
+  stackRestore(sp);
+  if (typeof e !== "number" && e !== "longjmp") throw e;
+  Module["setThrew"](1, 0);
+ }
+}
 function invoke_vjiiii(index, a1, a2, a3, a4, a5, a6) {
  var sp = stackSave();
  try {
@@ -18880,6 +18895,7 @@ Module.asmLibraryArg = {
  "nullFunc_vijji": nullFunc_vijji,
  "nullFunc_vijjii": nullFunc_vijjii,
  "nullFunc_vijjji": nullFunc_vijjji,
+ "nullFunc_vji": nullFunc_vji,
  "nullFunc_vjiiii": nullFunc_vjiiii,
  "nullFunc_vjji": nullFunc_vjji,
  "invoke_dd": invoke_dd,
@@ -19142,6 +19158,7 @@ Module.asmLibraryArg = {
  "invoke_vijji": invoke_vijji,
  "invoke_vijjii": invoke_vijjii,
  "invoke_vijjji": invoke_vijjji,
+ "invoke_vji": invoke_vji,
  "invoke_vjiiii": invoke_vjiiii,
  "invoke_vjji": invoke_vjji,
  "_JS_Cursor_SetImage": _JS_Cursor_SetImage,
@@ -26377,6 +26394,11 @@ var dynCall_vijjji = Module["dynCall_vijjji"] = (function() {
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
  return Module["asm"]["dynCall_vijjji"].apply(null, arguments);
+});
+var dynCall_vji = Module["dynCall_vji"] = (function() {
+ assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
+ assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
+ return Module["asm"]["dynCall_vji"].apply(null, arguments);
 });
 var dynCall_vjiiii = Module["dynCall_vjiiii"] = (function() {
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");

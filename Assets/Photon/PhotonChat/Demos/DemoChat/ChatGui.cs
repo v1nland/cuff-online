@@ -57,8 +57,8 @@ public class ChatGui : MonoBehaviour, IChatClientListener
 
     public GameObject missingAppIdErrorPanel;
 	public GameObject ConnectingLabel;
-
-	public RectTransform ChatPanel;     // set in inspector (to enable/disable panel)
+    public GameObject FriendsPanel;
+    public RectTransform ChatPanel;     // set in inspector (to enable/disable panel)
 	public GameObject UserIdFormPanel;
 	public InputField InputFieldChat;   // set in inspector
 	public Text CurrentChannelText;     // set in inspector
@@ -191,7 +191,7 @@ public class ChatGui : MonoBehaviour, IChatClientListener
 			return;
 		}
 
-		this.StateText.gameObject.SetActive(this.ShowState); // this could be handled more elegantly, but for the demo it's ok.
+        this.StateText.gameObject.SetActive(this.ShowState); // this could be handled more elegantly, but for the demo it's ok.
 	}
 
 
@@ -394,6 +394,9 @@ public class ChatGui : MonoBehaviour, IChatClientListener
 			this.FriendListUiItemtoInstantiate.SetActive(false);
 		}
 
+        if(this.FriendsList.Length == 0) {
+            this.FriendsPanel.SetActive(false);
+        }
 
 		this.chatClient.SetOnlineStatus(ChatUserStatus.Online); // You can set your online state (without a mesage).
 	}
