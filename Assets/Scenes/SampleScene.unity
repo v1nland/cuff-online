@@ -1235,7 +1235,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1321,8 +1321,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 302023229}
-  - {fileID: 1059933292}
   - {fileID: 2068101145}
+  - {fileID: 1059933292}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1482,7 +1482,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -15.0000305}
+  m_AnchoredPosition: {x: 0, y: -15.000061}
   m_SizeDelta: {x: -10, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &598322905
@@ -2779,7 +2779,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 559301317}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1059933293
 MonoBehaviour:
@@ -3554,6 +3554,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9194804663389060868, guid: 081a099676bf9474a8a2e16d3b8a4fc9,
+        type: 3}
+      propertyPath: m_Name
+      value: Morello's Book
+      objectReference: {fileID: 0}
     - target: {fileID: -3075738564280315962, guid: 081a099676bf9474a8a2e16d3b8a4fc9,
         type: 3}
       propertyPath: item
@@ -3579,11 +3584,6 @@ PrefabInstance:
         type: 3}
       propertyPath: ObservedComponents.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9194804663389060868, guid: 081a099676bf9474a8a2e16d3b8a4fc9,
-        type: 3}
-      propertyPath: m_Name
-      value: Morello's Book
       objectReference: {fileID: 0}
     - target: {fileID: 9194804663389060874, guid: 081a099676bf9474a8a2e16d3b8a4fc9,
         type: 3}
@@ -5363,6 +5363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7054cf73c7f72e40ad035c85ff0eb7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerCameraPrefab: {fileID: 5645696305277769106, guid: a715e6498a8f8444e8af75aa518ea006,
+    type: 3}
 --- !u!114 &1910909725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5375,6 +5377,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7dadfc08259d3045a87b54077cefd2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  photonManager: {fileID: 0}
+  RenderedUserName: {fileID: 0}
 --- !u!1 &1934489580
 GameObject:
   m_ObjectHideFlags: 0
@@ -5902,7 +5906,7 @@ RectTransform:
   - {fileID: 849879221}
   - {fileID: 1439246178}
   m_Father: {fileID: 559301317}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

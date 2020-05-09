@@ -6,6 +6,8 @@ using Photon.Realtime;
 
 public class PhotonManager : MonoBehaviourPunCallbacks
 {
+    public Transform PlayerCameraPrefab;
+
     public void GameConnect() {
         PhotonNetwork.ConnectUsingSettings();
     }
@@ -19,6 +21,9 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     }
 
     public override void OnJoinedRoom() {
-        PhotonNetwork.Instantiate("Player", transform.position, Quaternion.identity);
+        GameObject player = PhotonNetwork.Instantiate("Player_Witch", transform.position, Quaternion.identity);
+        GameObject playerCamera = Instantiate(PlayerCameraPrefab, transform.position, Quaternion.identity).gameObject;
+
+        playerCamera.GetComponent<BasicCameraFollow>().followTarget = player.transform;
     }
 }
