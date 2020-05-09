@@ -5283,7 +5283,6 @@ GameObject:
   - component: {fileID: 1910909724}
   - component: {fileID: 1910909722}
   - component: {fileID: 1910909721}
-  - component: {fileID: 1910909725}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -5365,20 +5364,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerCameraPrefab: {fileID: 5645696305277769106, guid: a715e6498a8f8444e8af75aa518ea006,
     type: 3}
---- !u!114 &1910909725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1910909720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7dadfc08259d3045a87b54077cefd2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  photonManager: {fileID: 0}
-  RenderedUserName: {fileID: 0}
 --- !u!1 &1934489580
 GameObject:
   m_ObjectHideFlags: 0

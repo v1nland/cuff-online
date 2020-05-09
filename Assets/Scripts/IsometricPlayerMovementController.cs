@@ -6,8 +6,11 @@ public class IsometricPlayerMovementController : MonoBehaviour
 {
 
     public float movementSpeed = 1f;
-    IsometricCharacterRenderer isoRenderer;
 
+    private float horizontalInput;
+    private float verticalInput;
+
+    IsometricCharacterRenderer isoRenderer;
     Rigidbody2D rbody;
 
     private void Awake()
@@ -16,12 +19,15 @@ public class IsometricPlayerMovementController : MonoBehaviour
         isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
     }
 
+    void Update() {
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
         Vector2 currentPos = rbody.position;
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
         Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
         Vector2 movement = inputVector * movementSpeed;
