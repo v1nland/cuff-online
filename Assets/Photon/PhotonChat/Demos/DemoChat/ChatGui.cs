@@ -371,6 +371,8 @@ public class ChatGui : MonoBehaviour, IChatClientListener
 
 	    this.UserIdText.text = "Conectado "+ this.UserName;
 
+        PhotonNetwork.NickName = this.UserName;
+
 		this.ChatPanel.gameObject.SetActive(true);
 
 		if (this.FriendsList!=null  && this.FriendsList.Length>0)

@@ -5,9 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C540080A-BED7-978E-DDFC-EE09E5DBB722}</ProjectGuid>
+    <ProjectGuid>{0D4097A5-F951-2A1B-5825-D0EBE4E3BC7D}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Unity.Rider.Editor</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -47,11 +47,17 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Managed/UnityEngine/UnityEngine">
       <HintPath>D:\Program Files (x86)\2019.2.5f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -643,6 +649,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="cuff-online.csproj">
+      <Project>{314B833E-346F-CDD3-3CEB-5D44D38EFD5D}</Project>
+      <Name>cuff-online</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
       <Project>{01729BEB-38B3-94D0-873E-F22C19EB806A}</Project>
       <Name>UnityEditor.TestRunner</Name>
@@ -651,19 +661,78 @@
       <Project>{E08C0643-0A13-BF9B-F68E-2FDBBB855F02}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
+      <Project>{5434E390-48BD-22AD-7204-8E8348643A28}</Project>
+      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
+      <Project>{651B5920-0C0F-8CC4-77AA-31B58E994E83}</Project>
+      <Name>PunDemos.DemoHubEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
+      <Project>{121EF014-53E8-C1D8-8D4A-7482949F27D3}</Project>
+      <Name>PunDemos.DemoSlotcarEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VSCode.Editor.csproj">
+      <Project>{F37EB8D3-595B-2A8E-9D57-98253E4F534B}</Project>
+      <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
+      <Project>{1E703456-A30F-599B-63B4-1A8804EF405D}</Project>
+      <Name>PhotonUnityNetworking.Demos</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
+      <Project>{77446C08-6EE1-25B9-8EE1-B0E3B884AF4C}</Project>
+      <Name>PhotonUnityNetworking.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{3A848AB7-9891-EDDA-D555-BF184C2F81F4}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonWebSocket.csproj">
+      <Project>{E0F4D774-A2FF-449E-153A-671502DD07F1}</Project>
+      <Name>PhotonWebSocket</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.CollabProxy.Editor.csproj">
+      <Project>{C12CEEC6-100C-58A2-DE36-314E4DE5E40B}</Project>
+      <Name>Unity.CollabProxy.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonRealtime.csproj">
+      <Project>{46CD5C6C-EEB1-9647-EFDC-AECB90EB247F}</Project>
+      <Name>PhotonRealtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{C540080A-BED7-978E-DDFC-EE09E5DBB722}</Project>
+      <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.csproj">
+      <Project>{0DDAA233-0E0C-843C-A686-46B229F8EDB6}</Project>
+      <Name>PhotonUnityNetworking</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonChat.csproj">
+      <Project>{C2E4545A-CFD8-1C54-CC06-23208DF43373}</Project>
+      <Name>PhotonChat</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{07A21C90-D344-AE1A-8456-9910C203B41A}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
+      <Project>{41237C29-56BB-3231-379F-9E2DD1841B8B}</Project>
+      <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
+      <Project>{5F1D0165-5AE6-C4DA-5508-CA9D8D5A57A5}</Project>
+      <Name>PhotonUnityNetworking.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\Discovery.cs" />
-    <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\EditorPluginInterop.cs" />
-    <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\LoggingLevel.cs" />
-    <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\PluginSettings.cs" />
-    <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\ProjectGeneration.cs" />
-    <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\RiderInitializer.cs" />
-    <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\RiderScriptEditor.cs" />
-    <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\RiderScriptEditorData.cs" />
-    <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\Util\FileSystemUtil.cs" />
-    <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\Util\LibcNativeInterop.cs" />
-    <Compile Include="Packages\com.unity.ide.rider\Rider\Editor\Util\UnityUtils.cs" />
+    <Compile Include="Assets\_External\2d-techdemos\Editor\PreviewUtil.cs" />
+    <Compile Include="Assets\_External\2d-techdemos\Rule Tiles\Scripts\Editor\CustomRuleTileMenu.cs" />
+    <Compile Include="Assets\_External\2d-techdemos\Rule Tiles\Scripts\Editor\HexagonalRuleTileEditor.cs" />
+    <Compile Include="Assets\_External\2d-techdemos\Rule Tiles\Scripts\Editor\IsometricRuleTileEditor.cs" />
+    <Compile Include="Assets\_External\2d-techdemos\Rule Tiles\Scripts\Editor\RuleOverrideTileEditor.cs" />
+    <Compile Include="Assets\_External\2d-techdemos\Rule Tiles\Scripts\Editor\RuleTileEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonChat\Code\changes-chat.txt" />

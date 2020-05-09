@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour {
 
-	public Item item;
-    public PhotonView photonView;
+    PhotonView photonView;
+
+    public Item item;
 
     private void Start() {
         photonView = GetComponent<PhotonView>();

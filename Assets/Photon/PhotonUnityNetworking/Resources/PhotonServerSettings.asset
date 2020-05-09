@@ -21,7 +21,7 @@ MonoBehaviour:
     FixedRegion: 
     Server: 
     Port: 0
-    Protocol: 5
+    Protocol: 0
     AuthMode: 0
     EnableLobbyStatistics: 0
     NetworkLogging: 1
@@ -37,6 +37,11 @@ MonoBehaviour:
   - Fire
   - RespawnSpaceship
   - LocalSelfDestroy
+  - UpdatePlayerName
+  - UpdateUserName
+  - SetNameTextParent
+  - SetDirection
+  - SetDirectionFromIsoRenderer
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

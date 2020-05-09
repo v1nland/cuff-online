@@ -100,9 +100,9 @@ GameObject:
   - component: {fileID: 4143689933723700580}
   - component: {fileID: 1605190440829367727}
   - component: {fileID: 4173030412650197969}
-  - component: {fileID: 3700902917186805050}
+  - component: {fileID: 3604135114634152767}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player_Witch
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -317,6 +317,7 @@ MonoBehaviour:
   - {fileID: 4143689933723700580}
   - {fileID: 1605190440829367727}
   - {fileID: 4173030412650197969}
+  - {fileID: 3604135114634152767}
 --- !u!114 &1630297443661286905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,7 +377,7 @@ MonoBehaviour:
     baseValue: 0
   harvest:
     baseValue: 0
---- !u!114 &3700902917186805050
+--- !u!114 &3604135114634152767
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -385,12 +386,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1630297443661286902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dba1a179e553446f0a08606778f559f1, type: 3}
+  m_Script: {fileID: 11500000, guid: d0e5dc86b2c34da45b89115329ef959a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenOffset: {x: 0, y: 30, z: 0}
-  playerNameText: {fileID: 3887121316298718972}
-  playerHealthSlider: {fileID: 0}
+  RenderedUserName: {fileID: 3887121316298718972}
 --- !u!1 &2358668363312731869
 GameObject:
   m_ObjectHideFlags: 0

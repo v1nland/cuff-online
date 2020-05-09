@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 
 public class IsometricCharacterRenderer : MonoBehaviour
@@ -12,15 +13,13 @@ public class IsometricCharacterRenderer : MonoBehaviour
     Animator animator;
     int lastDirection;
 
-    private void Awake()
-    {
+    private void Start() {
         //cache the animator component
         animator = GetComponent<Animator>();
     }
 
-
+    [PunRPC]
     public void SetDirection(Vector2 direction){
-
         //use the Run states by default
         string[] directionArray = null;
 
@@ -70,12 +69,6 @@ public class IsometricCharacterRenderer : MonoBehaviour
         //round it, and we have the answer!
         return Mathf.FloorToInt(stepCount);
     }
-
-
-
-
-
-
 
     //this function converts a string array to a int (animator hash) array.
     public static int[] AnimatorStringArrayToHashArray(string[] animationArray)
