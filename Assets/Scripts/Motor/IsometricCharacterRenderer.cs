@@ -11,7 +11,7 @@ public class IsometricCharacterRenderer : MonoBehaviour
     public static readonly string[] runDirections = {"Run N", "Run NW", "Run W", "Run SW", "Run S", "Run SE", "Run E", "Run NE"};
 
     Animator animator;
-    int lastDirection = 0;
+    int lastDirection;
 
     private void Start() {
         //cache the animator component
@@ -40,7 +40,8 @@ public class IsometricCharacterRenderer : MonoBehaviour
         }
 
         //tell the animator to play the requested state
-        animator.Play(directionArray[lastDirection]);
+        if(animator != null)
+            animator.Play(directionArray[lastDirection]);
     }
 
     //helper functions

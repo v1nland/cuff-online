@@ -17,10 +17,12 @@ public class PlayerAttack : MonoBehaviourPun
 
     void Update()
     {
-        cooldown -= Time.deltaTime;
+        if (photonView.IsMine) { 
+            cooldown -= Time.deltaTime;
 
-        if (Input.GetButtonDown("Fire1")) {
-            Shoot();
+            if (Input.GetButtonDown("Fire1")) {
+                Shoot();
+            }
         }
     }
 

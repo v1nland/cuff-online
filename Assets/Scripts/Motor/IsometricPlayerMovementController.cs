@@ -40,7 +40,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
     [PunRPC]
     void SetDirectionFromIsoRenderer(Vector2 direction) {
-        if(isoRenderer != null)
-            isoRenderer.SetDirection(direction);
+        isoRenderer.SetDirection(direction);
     }
 }
