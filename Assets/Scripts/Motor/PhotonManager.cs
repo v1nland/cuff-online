@@ -21,9 +21,13 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     }
 
     public override void OnJoinedRoom() {
+        // instantiate player
         GameObject player = PhotonNetwork.Instantiate("Player_Witch", transform.position, Quaternion.identity);
+        // instantiate player camera
         GameObject playerCamera = Instantiate(PlayerCameraPrefab, transform.position, Quaternion.identity).gameObject;
-
+        // follow player with the camera
         playerCamera.GetComponent<BasicCameraFollow>().followTarget = player.transform;
+        // set player camera to followMousePosition component
+        player.GetComponentInChildren<FollowMousePosition>().playerCamera = playerCamera.GetComponent<Camera>();
     }
 }

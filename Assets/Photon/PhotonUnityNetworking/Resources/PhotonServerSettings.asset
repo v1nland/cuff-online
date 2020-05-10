@@ -42,6 +42,9 @@ MonoBehaviour:
   - SetNameTextParent
   - SetDirection
   - SetDirectionFromIsoRenderer
+  - InstantiateBullet
+  - Shoot
+  - InstantiateBulletTest
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
